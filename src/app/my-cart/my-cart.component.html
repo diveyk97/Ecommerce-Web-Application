@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="card-deck mt-4">
+            <div *ngFor="let product of productArray">
+
+                <div class=" col-md-12 col-sm-12">
+                    <div class="card" id="card">
+                        <img class=" rounded card-img-top img-fluid " src={{product.imgurl}} alt="Card image cap" style="height: 180px;">
+                        <div class="card-body">
+                            <p class="card-title ml-4"><span style="font-weight: bold;">{{product.brand}}</span><br> Rs {{product.price}}/-
+                            </p>
+                            <h6>Quantity:</h6>
+                            <input type="number" id="quantity" name="quantity" min="1" value={{product.quantity}} (click)="setQuantity(product,$event.target.value)">
+                            <a class="text-info" (click)="removeItem(product);" type="button" class="card-link-secondary small text-uppercase mr-3 text-info"><i class="fa fa-trash mr-1"></i>Remove Item</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+
+        <input type="button" value="Proceed to Checkout" (click)="goToCheckOut();">
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<br>
+
+<div class="row">
+    <div class="card-deck mt-4">
+        <div *ngFor="let product of productArray">
+
+            <div class=" col-md-12 col-sm-12">
+                <div class="card" id="card" (click)="showProductDetails(product);">
+                    <img class=" rounded card-img-top img-fluid " src={{product.imgurl}} alt="Card image cap" style="height: 180px;">
+                    <div class="card-body">
+                        <p class="card-title ml-4"><span style="font-weight: bold;">{{product.brand}}</span>
+                            <br style="font-family: serif; font-weight: bold;"> Rs {{product.price}}/-
+
+                        </p>
+                        <p> <a (click)="showProductDetails(product)"><span
+                                        class="fa fa-cart-plus ml-5"></span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

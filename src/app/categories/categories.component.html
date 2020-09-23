@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <div style="font-family: serif;font-weight: bolder;font-size: xx-large;">Categories:</div>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Mens Wear
+                      </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="btn" id="menshirt" class="btn btn-link" (click)="getShirts($event.target.id);">Shirts</div><br>
+                            <div id="mentshirt" class="btn btn-link" (click)="getTShirts($event.target.id);">T-Shirts</div><br>
+                            <div id="menshoes" class="btn btn-link" (click)="getShoes($event.target.id);">Shoes</div>
+                            <div id="menpant" class="btn btn-link" (click)="getPants($event.target.id);">Pants</div><br>
+                            <div id="menshort" class="btn btn-link" (click)="getShorts($event.target.id);">Shorts</div><br>
+                            <div id="menpyjama" class="btn btn-link" (click)="getPyjamas($event.target.id);">Pyjamas</div><br>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Womens Wear
+                      </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+
+                            <div id="womenshirt" class="btn btn-link" (click)="getShirts($event.target.id);">Shirts</div><br>
+                            <div id="womentshirt" class="btn btn-link" (click)="getTShirts($event.target.id);">T-Shirts</div><br>
+                            <div id="womenshoes" class="btn btn-link" (click)="getShoes($event.target.id);">Shoes</div>
+                            <div id="womenpant" class="btn btn-link" (click)="getPants($event.target.id);">Pants</div><br>
+                            <div id="womenshort" class="btn btn-link" (click)="getShorts($event.target.id);">Shorts</div><br>
+                            <div id="womenpyjama" class="btn btn-link" (click)="getPyjamas($event.target.id);">Pyjamas</div><br>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Kids Wear
+                      </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+
+                            <div id="kidshirt" class="btn btn-link" (click)="getShirts($event.target.id);">Shirts</div><br>
+                            <div id="kidtshirt" class="btn btn-link" (click)="getTShirts($event.target.id);">T-Shirts</div><br>
+                            <div id="kidshoes" class="btn btn-link" (click)="getShoes($event.target.id);">Shoes</div>
+                            <div id="kidpant" class="btn btn-link" (click)="getPants($event.target.id);">Pants</div><br>
+                            <div id="kidshort" class="btn btn-link" (click)="getShorts($event.target.id);">Shorts</div><br>
+                            <div id="kidpyjama" class="btn btn-link" (click)="getPyjamas($event.target.id);">Pyjamas</div><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10" id="sidebar">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

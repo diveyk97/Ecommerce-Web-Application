@@ -1,0 +1,9 @@
+.container-fluid {
+    background-image: url(../../assets/displayproductbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item {
+    max-height: 600px;
+}

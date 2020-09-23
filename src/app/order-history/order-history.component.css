@@ -1,0 +1,14 @@
+.container-fluid {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4Jldv5OVThCJsDEyTenYN6kWQWP_ZCMmP3A&usqp=CAU);
+}
+
+.col-10 {
+    min-height: 500px;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-white-texture-light-background-image_202901.jpg);
+    margin: 5%;
+}
+
+span {
+    font-weight: bolder;
+    font-family: serif;
+}

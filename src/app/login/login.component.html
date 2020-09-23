@@ -1,0 +1,84 @@
+<div class="container-fluid">
+    <br>
+    <div class="row">
+
+
+        <div class="col rounded" id="form">
+            <br>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                For Admin
+              </button>
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Admin Credentials</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        </div>
+                        <div class="modal-body">
+                            <span style="font-family: serif; font-weight: bolder;font-size: xx-large;">Username:</span>admin <br>
+                            <span style="font-family: serif; font-weight: bolder;font-size: xx-large;">Password:</span>adminadmin <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <form [formGroup]="logInForm" name="logInForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1"></label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter username" [formControlName]="'username'" aria-describedby="emailHelp">
+                    <div style=" color:whitesmoke;font-family: serif; font-weight: bolder;" class="text-dark" *ngIf="logInForm.get('username').hasError('required') && !logInForm.get('username').pristine;">mailId is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"></label>
+                    <input type="password" class="form-control" placeholder="Enter Password" [formControlName]="'passWord'" id="exampleInputPassword1">
+                    <div style="color:whitesmoke; font-family: serif; font-weight: bolder;" class="text-dark" *ngIf="logInForm.get('passWord').hasError('required') && !logInForm.get('passWord').pristine">password is required</div>
+                </div>
+                <div class="form-group form-check">
+                    <button type="submit" class="btn btn-primary " style="color:whitesmoke;" (click)="validateLogin();">login</button><br> {{userValidationFailMessage}}
+                </div>
+                <div class="accordion bg-transparent" id="accordionExample">
+                    <div class="card bg-transparent">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button id="btn-accordion" class="btn btn-link  text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Register
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <form [formGroup]="registerForm" name="logInForm">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleInputEmail1" [formControlName]=" 'username' " placeholder="Enter username" aria-describedby="emailHelp">
+                                        <br>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" [formControlName]=" 'mailId' " placeholder="Enter Email" aria-describedby="emailHelp">
+                                        <div class="text-dark rounded" style="color:whitesmoke; font-family: serif; font-weight: bolder;" *ngIf="registerForm.get( 'mailId').hasError( 'email') && (!registerForm.get( 'mailId').pristine || registerForm.get( 'mailId').touched); ">email is not in correct format</div>
+
+                                        <br> <input type="password" class="form-control" placeholder="Enter Password" id="exampleInputPassword1" [formControlName]=" 'passWord' ">
+                                        <div class="text-dark rounded text-justify text-dark" style="color:whitesmoke; font-family: serif; font-weight: bold;" *ngIf="registerForm.get( 'passWord').hasError( 'minlength') && (!registerForm.get( 'passWord').pristine || registerForm.get( 'passWord').touched) ">password must not consist of less than 8 characters</div>
+                                        <br> <input type="password" class="form-control" placeholder="Confirm Password" id="exampleInputPassword1" [formControlName]=" 'cpassWord' ">
+                                        <div class="text-dark rounded text-justify text-dark" style="font-family: serif;color:whitesmoke; font-weight: bold;" *ngIf="registerForm.get( 'cpassWord').hasError( 'minlength') && (!registerForm.get( 'cpassWord').pristine || registerForm.get( 'cpassWord').touched) ">password must not consist of less than 8 characters</div>
+                                        <div class="text-dark rounded text-justify text-dark" style="font-family: serif;color:whitesmoke; font-weight: bold;" *ngIf="registerForm.get( 'cpassWord').hasError( 'mustMatch') && (!registerForm.get( 'cpassWord').pristine || registerForm.get( 'cpassWord').touched)">Passwords must match</div>
+                                        <br> <input type="text" class="form-control" placeholder="Mobile Number" id="exampleInputPassword1" [formControlName]=" 'mobilePhone' ">
+                                        <div class="text-dark rounded text-justify text-dark" style=" color:whitesmoke;font-family: serif; font-weight: bold;" *ngIf="registerForm.get( 'mobilePhone').hasError( 'pattern') && (!registerForm.get( 'mobilePhone').pristine || registerForm.get( 'mobilePhone').touched) ">mobile must consist of 10 numbers</div>
+                                        <br> <button type="submit" class="btn btn-primary" (click)="registerUser();">Register</button><br> {{registeredUser}}
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+</div>

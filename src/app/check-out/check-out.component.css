@@ -1,0 +1,37 @@
+#gettingOrderTag {
+    box-shadow: 0px 5px 9px 0px #33333333;
+}
+
+.container-fluid {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPPmyxyHwsTuZFDqxBlGuBnYk-l2KLmK7BqQ&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: serif;
+}
+
+.col-6 {
+    background-image: url(../../assets/checkoutbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.col-4 {
+    background-image: url(../../assets/checkoutbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#prooductDisp {
+    min-height: 60%;
+}
+
+#totalbill {
+    font-family: serif;
+    font-weight: bolder;
+}

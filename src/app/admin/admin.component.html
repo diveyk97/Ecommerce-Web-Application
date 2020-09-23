@@ -1,0 +1,113 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4" id="showButton">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+   Add Product
+  </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row mt-4">
+                                    <div class="form-group col-md-6">
+                                        <!-- <label for="name">Name</label> -->
+                                        <input type="text" #name class="form-control" id="name" placeholder="name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <select id="type" #type name="cars">
+                                            <option value="menshirt">menshirt</option>
+                                            <option value="mentshirt">mentshirt</option>
+                                            <option value="menshoes">menshoes</option>
+                                            <option value="womenshirt">womenshirt</option>
+                                            <option value="womentshirt">womentshirt</option>
+                                            <option value="kidshirt">kidshirt</option>
+                                            <option value="kidtshirt">kidtshirt</option>
+                                            <option value="menpant">menpant</option>
+                                            <option value="menshort">menshort</option>
+                                            <option value="menpyjama">menpyjama</option>
+                                            <option value="womenshoes">womenshoes</option>
+                                            <option value="womenpant">womenpant</option>
+                                            <option value="womenshort">womenshort</option>
+                                            <option value="womenpyjama">womenpyjama</option>
+                                            <option value="kidshoes">kidsshoes</option>
+                                            <option value="kidpant">kidspant</option>
+                                            <option value="kidshort">kidsshort</option>
+                                            <option value="kidpyjama">kidspyjama</option>
+                                          </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #description class="form-control" id="Description" placeholder="description">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #id class="form-control" id="id" placeholder="id">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #price class="form-control" id="price" placeholder="price">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #image class="form-control" id="image" placeholder="Main Image URL">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #imagea class="form-control" id="imagea" placeholder="Second Image URL">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #imageb class="form-control" id="imageb" placeholder="Third Image URL">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" #brand class="form-control" id="brand" placeholder="brand">
+                                    </div>
+                                </div>
+
+                            </form>
+                            <div class="mt-1">
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" (click)="addNewProductForAdmin(name.value,id.value,type.value,description.value,price.value,image.value,imagea.value,imageb.value,brand.value)">Add New Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br> <br>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+    Delete Product
+  </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModal1Label">Delete Product</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                        </div>
+                        <div class="modal-body  text-center font-weight-bold">
+                            To delete a item ,please go to Categories and select the product and delete it.
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link text-light" (click)="goToHome();">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" (click)="goToCategories();">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" (click)="goToCart();">MyCart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" (click)="goToLogin();">Login/Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" (click)="goToOrderHistory();">Order History</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </nav>
+    <div>
+
+        <router-outlet></router-outlet>
+
+    </div>
+    <footer class="mt-4">
+        <div class="row bg-dark">
+
+            <div class="col-sm-6 col-md-2 text-light  mt-4 px-5">
+                <h5 class="font-weight-bold text-uppercase mb-2">About</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a>Privacy</a>
+                    </li>
+                    <li>
+                        <a>Status</a>
+                    </li>
+                    <li>
+                        <a>Security</a>
+                    </li>
+                    <li>
+                        <a>Help</a>
+                    </li>
+                    <li>
+                        <a>Careers</a>
+                    </li>
+                    <li>
+                        <a>Blog</a>
+                    </li>
+                    <li>
+                        <a>About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-2 text-light  mt-4 px-5">
+                <h5 class="font-weight-bold text-uppercase mb-2">Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!"><i class="fa fa-twitter" style="font-size:36px; color:white"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa fa-instagram" style="font-size:36px;color:red"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa fa-google-plus-square" style="font-size:36px;color:green"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa fa-facebook-square" style="font-size:36px;"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-4 text-light mt-4 px-5">
+                <h5 class="font-weight-bold text-uppercase mb-4">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <i class="fa fa-home mr-3"></i> Maharashtra, 420039, India</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa fa-envelope mr-3"></i>diveykhandelwal97@gmail.com</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa fa-phone mr-3"></i>07550222222</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-12 col-md-4 bg-dark mt-2 mb-2 pr-4">
+                <h1 style="color: beige ;font-weight: bolder; font-family: serif;">Leave a query-</h1>
+                <form action="">
+                    <div class="form-group mt-4 ml-4 mr-4">
+                        <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
+                    </div>
+                    <div class="form-group mt-4 ml-4 mr-4">
+
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group ml-4 mr-4">
+                        <input type="textarea" class="form-control" id="reply" placeholder="Leave a Reply" name="reply">
+                    </div>
+                    <button type="submit" class="btn ml-4 mb-3" style="background-color:whitesmoke ; border: 1px solid black">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="bg-dark footer-copyright text-center py-3" style="color: beige ;font-family: serif; font-weight: bolder;">© 2020 Copyright:
+
+        </div>
+    </footer>
+</body>
+
+</html>

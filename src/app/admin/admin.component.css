@@ -1,0 +1,10 @@
+.container-fluid {
+    /* min-height: 200px; */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQ_urrhZNVPCYnFOagUItvWOVdopx6szQFDg&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#showButton {
+    padding: 10%;
+}
